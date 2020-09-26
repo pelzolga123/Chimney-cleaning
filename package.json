@@ -1,0 +1,32 @@
+{
+  "name": "chimney-cleaning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pelzolga123/Chimney-cleaning.git"
+  },
+  "author": "Olga Pelts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pelzolga123/Chimney-cleaning/issues"
+  },
+  "homepage": "https://github.com/pelzolga123/Chimney-cleaning#readme",
+  "devDependencies": {
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "css-loader": "^4.3.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.14.1",
+    "style-loader": "^1.2.1"
+  }
+}

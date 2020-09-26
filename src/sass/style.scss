@@ -1,5 +1,55 @@
-$bg-color: pink;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marmelad&display=swap');
+@import "~bootstrap/scss/bootstrap";
 
-body {
- background: $bg-color;
+$header-font: 'Lobster', cursive;
+$regular-font: 'Marmelad', sans-serif;
+
+h1{
+    font-size: 50px;
+    font-family: $header-font;
+    text-align: center;
+}
+
+nav{
+    background-color: #8b3c1f!important;
+}
+
+.navbar-brand{
+    font-family: $header-font;
+    color: #fff;
+    font-size: 28px;
+}
+
+.nav-link{
+    font-family: $regular-font;
+    color: #fff!important;
+    font-size: 18px;
+}
+
+.about-us{
+    background-image: url('../img/about-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  
+    height: 500px;  
+
+    h1{
+        color: #fff;
+        padding: 20px 0;
+    }
+}
+
+.contact-us{
+    background-image: url('../img/contact-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+    height: 500px;
+
+    h1{
+        color: #fff;
+        padding: 20px 0;
+    }
 }

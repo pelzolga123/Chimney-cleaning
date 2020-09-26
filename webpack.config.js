@@ -1,5 +1,5 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require("webpack");
 
 module.exports = {
   entry: './src/index.js',
@@ -18,7 +18,22 @@ module.exports = {
           'sass-loader',
         ],
       },
+
+      {
+        test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      }
     ],
   },
 
+
+  plugins: [
+    new webpack.ProvidePlugin({
+       $: "jquery",
+       jQuery: "jquery"
+   })
+  ],
 };

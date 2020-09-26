@@ -1,4 +1,5 @@
-{ "type": "module",
+{
+  "type": "module",
   "name": "chimney-cleaning",
   "version": "1.0.0",
   "description": "",

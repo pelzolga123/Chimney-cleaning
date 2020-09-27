@@ -1,12 +1,8 @@
 const path = require('path');
 const webpack = require("webpack");
-const miniCss = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: [
-    './src/main.js',
-    './src/style.css'
-  ],
+  entry: './src/index.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -15,20 +11,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "script-loader"
-        }
-      },
-
-      {
-        test: /\.(s?)css$/,
+        test:/\.(s*)css$/,
         use: [
-            "style-loader",
-            "css-loader",
-            "sass-loader"
-          ]
+          { loader:  'css-loader'},
+          { loader:  'sass-loader'},
+          { loader:  'style-loader'},
+        ]
      },
 
       {
@@ -54,9 +42,4 @@ module.exports = {
    })
   ],
 
-  plugins: [
-    new miniCss({
-       filename: 'style.css',
-    }),
- ],
 };

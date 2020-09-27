@@ -5,9 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack --watch",
+    "dev": "webpack-dev-server --mode development --open",
+    "start": "webpack -p && node server.js",
+    "build": "webpack",
     "heroku-postbuild": "echo Skip build on Heroku"
   },
   "repository": {
@@ -22,6 +22,8 @@
   "homepage": "https://github.com/pelzolga123/Chimney-cleaning#readme",
   "devDependencies": {
     "css-loader": "^4.3.0",
+    "html-webpack-plugin": "^4.5.0",
+    "html-webpack-template": "^6.2.0",
     "mini-css-extract-plugin": "^0.11.2",
     "node-sass": "^4.14.1",
     "postcss": "^8.0.9",
@@ -29,7 +31,8 @@
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "autoprefixer": "^10.0.0",
@@ -39,6 +42,7 @@
     "file-loader": "^6.1.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
+    "script-loader": "^0.7.2",
     "style-loader": "^1.2.1"
   },
   "heroku-run-build-script": true

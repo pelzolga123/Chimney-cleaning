@@ -3,7 +3,10 @@ const webpack = require("webpack");
 const miniCss = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    './src/main.js',
+    './src/style.css'
+  ],
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -12,12 +15,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test:/\.(s*)css$/,
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "script-loader"
+        }
+      },
+
+      {
+        test: /\.(s?)css$/,
         use: [
-           miniCss.loader,
-           'css-loader',
-           'sass-loader',
-        ]
+            "style-loader",
+            "css-loader",
+            "sass-loader"
+          ]
      },
 
       {

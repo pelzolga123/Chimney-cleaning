@@ -1,4 +1,4 @@
-require('./sass/style.scss');
+import './sass/style.scss';
 
 const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 

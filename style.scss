@@ -1,0 +1,277 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+.bg-1{
+    height: 600px;
+    //background-color: #292f35;
+    background: url('./img/image-house.jpg') center cover no-repeat;
+}
+.bg-2{
+    background-color: #1e2126;
+}
+.bg-3{
+    background-color: #2a3038;
+    position: absolute;
+    width: 50%;
+    left: 0;
+    height: 100%;
+    min-height: 1000px;
+    z-index: -1;
+}
+.bg-4{
+    background-color: #1c2127;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    height: 100%;
+    min-height: 1000px;
+    z-index: -1;
+}
+nav{
+    background-color:#ffc30b;
+    padding: 40px 0;
+
+    a{ 
+        color:#1e2126;
+        text-decoration: none;
+        font-family: 'Comfortaa', cursive;
+    }
+
+    li{
+        &:hover{
+            a{
+                color: #fff;
+            }
+        }
+    }
+
+    .logo{
+        max-height: 55px;
+    }
+}
+.about-us{
+    position: relative;
+}
+.home-img{
+    position: absolute;
+    top: 222px;
+    right: 0;
+}
+
+
+.main-header{  
+    margin: 250px auto 0 auto;
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+}
+
+.phone-header{
+    overflow: hidden; 
+    border-right: .15em solid #fff; 
+    white-space: nowrap;
+    font-size: 54px;
+    text-align: center;
+    letter-spacing: .15em; 
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    margin: 20px auto 0 auto;
+    max-width: 420px;
+
+    animation: 
+        typing 2s steps(20, end),
+        blink-caret .75s step-end infinite;
+}
+
+.gallery-header{
+    font-family: 'Comfortaa', cursive;
+    color: #ffc30b;
+    text-align: center;
+    font-size: 50px;
+    padding: 100px 0 80px 0;
+}
+
+.image{
+    border: 3px solid #ffc30b;
+}
+
+.img-caption{
+    background-color: #fff;
+    max-height: 200px;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 25%;
+    max-width: 320px;
+    display: table;
+
+    p{
+        font-size: 26px;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        font-family: 'Ubuntu', sans-serif;
+    }
+}
+
+.caption-right{
+    right: 0; 
+}
+
+.caption-left{
+    left: 0; 
+}
+
+.gallery-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.gallery-container-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 70% }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fff; }
+}
+
+.contact-us{
+    background-color:  #ffc30b;
+    padding-bottom: 50px;
+    
+    .contact-header{
+        color: #1e2126;
+        text-align: center;
+        font-size: 50px;
+        padding: 50px 0;
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+    }
+
+    .card-container{
+        padding: 35px 50px;
+        border: 2px solid #1e2126;
+        background-color: #fff;
+        height: 100%;
+        max-height: 450px;
+    }
+
+    .card-row{
+        margin-bottom: 20px;
+
+        a{
+            &:hover{
+                color:#ffc30b;
+            }
+        }
+    }
+
+    .card-row-header{
+        display: flex;
+        font-size: 26px;
+        font-family: 'Ubuntu', sans-serif;
+        color: #1e2126;
+        align-items: baseline;
+
+        i{
+             margin-right: 15px;
+        }
+    }
+}
+
+.card-data{
+    margin-bottom: 5px;
+    font-size: 22px; 
+    font-family: 'Comfortaa', cursive;
+    margin-left: 35px;
+    color: #1e2126;
+    text-decoration: none;
+}
+
+.questions{
+    position: relative;
+
+    .qa-header{
+        color: #fff;
+        text-align: center;
+        font-size: 50px;
+        padding: 50px 0;
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+    }
+
+    .qa-img{
+        max-width: 100%;
+    }
+
+    .qa-first{
+        margin-top: 100px;
+    }
+
+    .qa-container{
+        padding: 0 30px 20px 30px;
+
+        .qa-question{
+            color:#ffc30b;
+            font-size: 22px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        li{
+            color:#fff;
+            font-size: 20px;
+            font-family: 'Ubuntu', sans-serif;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.footer{
+    background-color: #ffc30b;
+    position: relative;
+    padding: 20px 0;
+
+    .card-data{
+        margin: 0 35px 0 0;
+
+        i{
+            color: #1e2126;
+
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+
+    .footer-nav{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin-bottom: 0;
+        
+        .nav-link{
+            color: #1e2126;
+            font-size: 16px;
+            font-family: 'Comfortaa', cursive;
+
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+
+}

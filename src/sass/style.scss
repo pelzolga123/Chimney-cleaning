@@ -4,9 +4,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
 .bg-1{
-    height: 600px;
-    background-color: #292f35;
+    height: 800px;
+    background: url('../img/image-house.jpg') no-repeat;
+    background-position: top;
+    background-size: cover;
+    position: relative;
 }
+
+.bg-1-filter{
+    background-color: rgba(41, 47, 53, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+}
+
 .bg-2{
     background-color: #1e2126;
 }
@@ -16,7 +28,7 @@
     width: 50%;
     left: 0;
     height: 100%;
-    min-height: 1000px;
+    min-height: 500px;
     z-index: -1;
 }
 .bg-4{
@@ -25,7 +37,7 @@
     width: 50%;
     right: 0;
     height: 100%;
-    min-height: 1000px;
+    min-height: 500px;
     z-index: -1;
 }
 nav{
@@ -49,6 +61,15 @@ nav{
     .logo{
         max-height: 55px;
     }
+
+    .navbar-toggler{
+        background-color: #1e2126;
+
+        i{
+            color:#ffc30b;
+            font-size: 20px;
+        }
+    }
 }
 .about-us{
     position: relative;
@@ -59,9 +80,36 @@ nav{
     right: 0;
 }
 
+.numbers{
+    margin-top: -65px;
+
+    .numbers-container{
+        background-color: #fff;
+        width: 100%;
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px;
+        box-shadow: 0px 0px 4px 2px rgba(242, 203, 0, 0.6);
+    }
+
+    .numbers-header{
+        text-align: center;
+        font-size: 58px;
+        font-family: 'Comfortaa', cursive;
+        color: #1c2127;
+    }
+
+    .numbers-details{
+        font-family: 'Comfortaa', cursive;
+        text-align: center;
+        font-size: 32px;
+        color: #1c2127;
+    }
+}
 
 .main-header{  
-    margin: 250px auto 0 auto;
+    margin: 300px auto 0 auto;
     font-family: 'Comfortaa', cursive;
     color: #fff;
     text-align: center;
@@ -90,29 +138,55 @@ nav{
     color: #ffc30b;
     text-align: center;
     font-size: 50px;
-    padding: 100px 0 80px 0;
+    padding: 160px 0 80px 0;
 }
 
 .image{
-    border: 3px solid #ffc30b;
+    width: 100%;
+    max-width: 318px;
+    margin: auto;
 }
 
 .img-caption{
-    background-color: #fff;
-    max-height: 200px;
-    position: absolute;
-    right: 0;
-    height: 100%;
-    top: 25%;
-    max-width: 320px;
-    display: table;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 380px;
 
     p{
         font-size: 26px;
         text-align: center;
-        vertical-align: middle;
-        display: table-cell;
         font-family: 'Ubuntu', sans-serif;
+        color: #fff;
+        padding: 0 15px;
+    }
+}
+
+.arrow-caption-before{
+    font-size: 26px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    align-items: center;
+
+    i{
+        color: #ffc30b;
+        font-size: 26px;
+        margin: 0 15px;
+    }
+}
+
+.arrow-caption-after{
+    font-size: 26px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+
+    i{
+        color: #ffc30b;
+        font-size: 26px;
+        margin: 0 15px;
     }
 }
 
@@ -131,12 +205,21 @@ nav{
     padding-bottom: 60px;
 }
 
-.gallery-container-reverse{
-    display: flex;
-    flex-direction: row-reverse;
-    position: relative;
-    padding-bottom: 60px;
+.gallery-container::after{
+    content: "";
+    position: absolute;
+    width: 300px;
+    background-color: #ffc30b;
+    height: 1px;
+    bottom: 30px;
+    left: calc(50% - 300px/2);
+    display: block;
+}   
+
+.last::after{
+    display: none;
 }
+
 
 @keyframes typing {
     from { width: 0 }
@@ -273,4 +356,180 @@ nav{
         }
     }
 
+}
+
+
+@media (max-width: 1240px) and (min-width: 1024px) {
+
+    .main-header{
+        font-size: 42px;
+    }
+
+    .phone-header{
+        font-size: 50px;
+    }
+
+    .numbers-header,
+    .contact-header,
+    .gallery-header,
+    .qa-header
+    {
+        font-size: 46px;
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    .qa-img{
+        display: none;
+    }
+
+    .qa-first{
+        margin: 0;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768){
+
+
+} 
+
+@media (max-width: 425px) {
+
+    .bg-3, .bg-4{
+        width: 100%;
+    }
+
+    .qa-first{
+        margin-top: 0!important;
+    }
+
+    .bg-1-filter{
+        width: 100%;
+    }
+
+    .bg-1{
+        max-height: 400px;
+    }
+
+    .main-header {
+        margin: 130px auto 0 auto;
+        font-size: 30px;
+    }
+    
+    .phone-header {
+        font-size: 32px!important;
+    }
+
+    .numbers-container{
+        max-width: 300px;
+        max-height: 170px;
+        margin: auto auto 20px auto;
+        padding: 20px 10px!important;
+    }
+
+    .numbers-header,
+    .contact-header,
+    .gallery-header,
+    .qa-header
+    {
+        font-size: 32px!important;
+    }
+
+    .numbers-details{
+        font-size: 24px!important;
+    }
+
+    .gallery-header {
+        padding: 50px 0 50px 0;
+    }
+
+    .arrow-caption-before,
+    .arrow-caption-after{
+        
+        font-size: 20px!important;
+
+        i{
+            transform: rotate(90deg);
+            font-size: 20px!important;
+        }
+    }
+
+    .gallery-container{
+        flex-direction: column;
+    }
+
+    .image{
+        padding: 0 15px;
+    }
+
+    .img-caption{
+        min-height: 220px;
+        padding: 10px 0;
+
+        p{
+            font-size: 20px!important;
+        }
+    }
+
+    .contact-header{
+        padding: 50px 0 25px 0!important;
+    }
+
+    .card-container{
+        padding: 25px 20px!important;
+        margin: 0 15px;
+    }
+
+    .card-data{
+        font-size: 16px!important;
+    }
+
+    .card-row-header{
+        font-size: 18px!important;
+    }
+
+    iframe{
+        padding: 0 15px!important;
+        margin-top: 20px!important;
+        width: 100%;
+    }
+
+    .qa-header{
+        padding: 25px 0!important;
+    }
+
+    .qa-container{
+        padding: 0 15px 20px 15px!important;
+
+        li{
+            font-size: 16px!important;
+        }
+
+        ul{
+            padding-left: 25px!important;
+        }
+    }
+
+    .qa-img{
+        display: none;
+    }
+
+    .qa-question{
+        font-size: 20px!important;
+    }
+
+    .footer-nav{
+        flex-direction: column!important;
+        padding: 0;
+    }
+
+    .card-data{
+        margin: 0px 15px 0 0px!important;
+    }
+
+    .footer-icon{
+        margin-left: 17px!important;
+    }
 }

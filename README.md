@@ -1,5 +1,3 @@
-# Chimney-cleaning
-
 <h1 align="center">Chimney cleaning</h1>
 <img src="https://i.ibb.co/X3smYQw/image.png" alt="restaurant-project" border="0">
 

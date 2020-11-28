@@ -325,7 +325,10 @@ nav{
 .footer{
     background-color: #ffc30b;
     position: relative;
-    padding: 20px 0;
+
+    .footer-p{
+        padding: 20px 0;
+    }
 
     .card-data{
         margin: 0 35px 0 0;
@@ -788,4 +791,20 @@ nav{
     transform: translateY(1em) rotateZ(0deg);
     transition: transform 4s .25s cubic-bezier(0,1,.5,1),
                 opacity .3s .25s ease-out;
+}
+
+.sign{
+    background-color:rgba(41,47,53,1);
+
+    p{
+        text-align: center;
+        font-size: 10px;
+        color: #fff;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    a{
+        color: #fff;
+    }
 }

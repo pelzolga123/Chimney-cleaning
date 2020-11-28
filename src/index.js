@@ -1,4 +1,5 @@
 import './sass/style.scss';
+import './animation';
 
 const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
 

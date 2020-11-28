@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
-    "start": "webpack-dev-server",
-    "build": "webpack -p --progress ",
-    "heroku-postbuild": "webpack -p"
+    "start": "webpack --watch",
+    "build": "webpack --config webpack.config.js",
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "repository": {
     "type": "git",

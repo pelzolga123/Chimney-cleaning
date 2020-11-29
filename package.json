@@ -1,0 +1,52 @@
+{
+  "type": "module",
+  "name": "chimney-cleaning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --open",
+    "start": "webpack --watch",
+    "build": "webpack --config webpack.config.js",
+    "heroku-postbuild": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pelzolga123/Chimney-cleaning.git"
+  },
+  "author": "Olga Pelts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pelzolga123/Chimney-cleaning/issues"
+  },
+  "homepage": "https://github.com/pelzolga123/Chimney-cleaning#readme",
+  "devDependencies": {
+    "css-loader": "^4.3.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^4.5.0",
+    "html-webpack-template": "^6.2.0",
+    "mini-css-extract-plugin": "^0.11.3",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.0.9",
+    "postcss-loader": "^4.0.2",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^1.3.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "autoprefixer": "^10.0.0",
+    "babel": "^6.23.0",
+    "bootstrap": "^4.5.2",
+    "file-loader": "^6.1.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "script-loader": "^0.7.2"
+  },
+  "heroku-run-build-script": true
+}
